@@ -1,0 +1,16 @@
+*,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+.notFound {
+  position: static;
+  inset: 0;
+}
+.notFound img {
+  width: 100%;
+  height: 100vh;
+  padding: 25px;
+  background-color: #333;
+}

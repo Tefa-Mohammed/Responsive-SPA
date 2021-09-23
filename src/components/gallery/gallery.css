@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap");
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+*::selection {
+  background-color: #ffa500;
+  color: #fff;
+}
+.gallery {
+  width: 100%;
+  padding-top: 15%;
+}
+.gallery .sectionH h2 span:last-of-type {
+  background-color: #fff !important;
+}
+.gallery .box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  gap: 20px;
+}
+.gallery .box .img_box {
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1rem 2rem;
+  border-radius: 10px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+.gallery .box .img_box:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.gallery .box .img_box .img {
+  position: relative;
+}
+.gallery .box .img_box .img .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  display: flex;
+  -webkit-place-items: center;
+  -moz-place-items: center;
+  place-items: center;
+  top: -110%;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  color: #fff;
+  padding: 0 10px;
+  line-height: 1.6;
+  letter-spacing: 1.2px;
+}
+.gallery .box .img_box:hover .img .overlay {
+  top: 0;
+}
+.gallery .box .img_box .img .overlay > div {
+  position: absolute;
+  right: -200%;
+  -webkit-transition: all 0.5s 0.5s ease-in-out;
+  transition: all 0.5s 0.5s ease-in-out;
+}
+.gallery .box .img_box:hover .img .overlay > div {
+  right: 0;
+}
+.gallery .box .img_box:hover .img .overlay > div p {
+  width: 80%;
+  margin: auto;
+}
+/* ===Media Query==== */
+@media (max-width: 992px) {
+  html {
+    font-size: 15px;
+  }
+  .gallery .box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(47%, 1fr));
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  .gallery {
+    width: 100%;
+  }
+  .gallery .box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    gap: 20px;
+  }
+}

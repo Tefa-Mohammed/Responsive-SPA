@@ -1,0 +1,32 @@
+.sectionH h2 {
+  text-align: center;
+  font-size: 2.7rem;
+  letter-spacing: 1.3px;
+  margin-bottom: 75px;
+}
+.sectionH h2 span {
+  color: #ffa500;
+  background-color: #ffa50033;
+  padding: 0px 10px;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
+/* ===Media Query==== */
+@media (max-width: 992px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  .sectionH h2 {
+    font-size: 1.7rem;
+    margin-bottom: 55px;
+  }
+  .sectionH h2 span {
+    margin-left: 3px;
+  }
+}

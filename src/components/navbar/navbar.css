@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap");
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+nav {
+  background-color: #333333;
+  padding: 20px 35px;
+  position: relative;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+nav > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.navIconSpan {
+  display: none;
+}
+nav .logo {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1.3px;
+}
+nav .logo::first-letter {
+  color: #ffa500;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 0;
+}
+nav ul li {
+  list-style: none;
+  font-size: 1.3rem;
+  letter-spacing: 1.3px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+nav ul li a:hover {
+  text-decoration: none;
+  color: #ffa500;
+}
+nav .search {
+  display: flex;
+  align-content: center;
+  gap: 20px;
+}
+nav .search i {
+  color: #fff;
+  font-size: 1.5rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+nav .search i:hover {
+  color: #ffa500;
+  font-size: 1.5rem;
+}
+
+nav form {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 2rem;
+  background-color: #333;
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+nav form.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
+}
+nav form span i {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+nav form span i:hover {
+  color: #ffa500;
+  font-size: 1.5rem;
+}
+
+/* ==========MEDIA QUERY========== */
+@media (max-width: 992px) {
+  html {
+    font-size: 15px;
+  }
+  nav {
+    padding: 20px 0px;
+  }
+  nav ul {
+    gap: 15px;
+  }
+  nav .search {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  nav > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navIconSpan {
+    display: block;
+  }
+  span #navIcon {
+    font-size: 1.8rem;
+    color: #fff;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  span #navIcon:hover {
+    color: #ffa500;
+    border-color: #ffa500;
+  }
+  nav .logo {
+    font-size: 2.3rem;
+  }
+  nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    left: 0px;
+    background-color: rgb(51, 51, 51);
+    clip-path: polygon(0px 0px, 100% 0px, 100% 0px, 0px 0px);
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 2px 1px 0px 1px rgb(85, 83, 83);
+  }
+  nav ul.active {
+    clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%);
+  }
+  nav ul li {
+    padding: 10px 25px;
+    background-color: #222;
+    width: 90%;
+    border-radius: 15px;
+    box-shadow: 2px 1px 0px 1px rgb(85, 83, 83);
+    /* margin-top: 5px; */
+    font-size: 1.6rem;
+  }
+  nav ul li:first-of-type {
+    margin-top: 15px;
+  }
+  nav ul li:last-of-type {
+    margin-bottom: 15px;
+  }
+  nav ul li:hover a {
+    padding-left: 30px;
+  }
+  nav .search {
+    gap: 25px;
+  }
+  nav .search i {
+    font-size: 1.8rem;
+  }
+}

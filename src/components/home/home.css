@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap");
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.carousel-caption {
+  top: 50% !important;
+  left: 50% !important;
+  transform-origin: center top;
+  transform: translate(-50%, -50%);
+  animation: hAnimate 3s alternate ease-in-out;
+}
+.carousel-caption h1 {
+  position: relative;
+  margin-bottom: 25px;
+  font-size: 2.9rem;
+  letter-spacing: 1.3px;
+  text-shadow: 1px 2px 2px gray;
+}
+.carousel-caption p {
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  letter-spacing: 1.3px;
+  text-shadow: 1px 2px 2px gray;
+}
+@keyframes hAnimate {
+  0% {
+    transform: rotate(90deg) translate(-50%, -50%);
+  }
+  30% {
+    transform: rotate(-20deg) translate(-50%, -50%);
+  }
+  60% {
+    transform: rotate(20deg) translate(-50%, -50%);
+  }
+  100% {
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+}
+.carousel-indicators {
+  width: 20%;
+  margin: 30px auto;
+  background-color: #333;
+  border-radius: 40%;
+}
+.carousel-indicators li {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ffa50070;
+}
+.carousel-indicators li:not(:last-of-type) {
+  margin-right: 10px;
+}
+.carousel-indicators li.active {
+  background-color: #ffa500;
+}
+/* ===Media Query==== */
+@media (max-width: 992px) {
+  html {
+    font-size: 15px;
+  }
+  header {
+    height: 80vh;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  header {
+    height: 50vh;
+  }
+  .carousel,
+  .carousel-inner,
+  .carousel-item,
+  video {
+    height: 100%;
+  }
+  .carousel-indicators {
+    width: 30%;
+  }
+  .carousel-indicators li {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ffa50070;
+  }
+  .carousel-indicators li:not(:last-of-type) {
+    margin-right: 5px;
+  }
+}

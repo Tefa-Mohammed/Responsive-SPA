@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap");
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+*::selection {
+  background-color: #ffa500;
+  color: #fff;
+}
+.review .sectionH h2 span:first-of-type,
+.review .sectionH h2 span:last-of-type {
+  background-color: #fff !important;
+}
+.review {
+  width: 100%;
+  padding-top: 15%;
+}
+.review .slider {
+  overflow: hidden;
+}
+.review .slider img {
+  margin: 0px auto 15px;
+}
+.review .slider h3 {
+  font-size: 1.9rem;
+  font-weight: 500;
+  letter-spacing: 1.3px;
+  color: #333;
+  margin-bottom: 15px;
+}
+.review .slider p {
+  line-height: 1.5;
+  font-size: 1rem;
+  letter-spacing: 1.3px;
+  color: #333;
+}
+.review .slider i {
+  margin-right: 5px;
+  font-size: 1.4rem;
+  letter-spacing: 1.3px;
+  color: #ffa500;
+}
+.review .slider .myCard {
+  padding: 20px 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  width: 440px;
+}
+.review .slider .myCard:hover {
+  transform: scale(1.05);
+}
+.slick-initialized .slick-slide > div {
+  margin: 15px 25px;
+}
+/* ===Media Query==== */
+@media (max-width: 992px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  .review {
+    width: 100%;
+  }
+}
