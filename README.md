@@ -1,3 +1,14 @@
+Don't forget `npm install` before run the project `npm start`
+
+simple responsive SPA using React.js = {
+hooks: ' componants ',
+props: ' buttons && section header ',
+routing: ' react-router-dom ',
+smooth scroll: ' react-use ',
+carousel: ' react-slick ',
+bootstrap
+};
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
